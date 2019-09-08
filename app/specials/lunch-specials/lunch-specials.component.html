@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-12">
+        <h3 style="text-align:center;">Lunch Combos</h3>
+        <hr />
+        <ul class="list-group">
+            <a 
+                class="list-group-item" 
+                style="text-align: center; border:none;" 
+                *ngFor="let item of items">
+                <strong>Combo {{ item.name }}</strong>
+                <br />
+                {{item.desc}}
+                <br *ngIf="item.desc" />
+                {{item.price}}
+            </a>
+        </ul>
+    </div>
+</div>

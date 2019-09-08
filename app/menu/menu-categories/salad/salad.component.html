@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">Salads</h3>
+            <hr />
+            <!-- image slidshow -->
+            <div class="col-10 offset-1">
+                <app-slideshow [images]="images"></app-slideshow>
+            </div>
+            <p style="text-align:center;margin-bottom:0;"><i>Includes Bread & Butter</i></p>
+            <p style="text-align:center;margin-top:0;margin-bottom:0;"><i>Made w/ lettuce, tomato, onions, sweet
+                    peppers,</i></p>
+            <p style="text-align:center;margin-top:0;"><i>black olives & croutons</i></p>
+
+            <p style="text-align:center;margin-bottom:0;"><i>Dressing Served on the side (Xtra $1.50):</i></p>
+            <p style="text-align:center;margin-top:0;margin-bottom:0;">Oil & Balsamic Vinegar, Fat-free French, French,
+            </p>
+            <p style="text-align:center;margin-top:0;margin-bottom:0;">Lite Ranch, Honey Mustard, Caesar, 
+            </p>
+            <p style="text-align:center;margin-top:0;margin-bottom:0;">Creamy Italian, Thousand Island,
+                </p>
+            <p style="text-align:center;margin-top:0;">Bleu Cheese</p>
+            
+            <ul class="list-group">
+                <a class="list-group-item no-border" style="text-align: center" *ngFor="let item of items">
+                    <strong>{{ item.name }}</strong>
+                    <br />
+                    {{item.desc}}
+                    <br *ngIf="item.desc" />
+                    {{item.price}}
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

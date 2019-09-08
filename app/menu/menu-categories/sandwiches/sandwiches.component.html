@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">Sandwiches</h3>
+            <hr />
+            <div class="col-10 offset-1">
+                <img src="./../../../../assets/menu/sandwich/1.jpg" 
+                title="" 
+                alt="" 
+                class="img-fluid rounded">
+            </div>
+            <p style="text-align:center;margin-bottom:0;"><i>Choice of: Kaiser, White, Wheat</i></p>
+            <p style="text-align:center;margin-top:0;"><i>Made with lettuce, tomato, raw onions & mayo</i></p>
+            <ul class="list-group">
+                <a class="list-group-item no-border" style="text-align: center" *ngFor="let item of items">
+                    <strong>{{ item.name }}</strong>
+                    <br />
+                    {{item.desc}}
+                    <br *ngIf="item.desc" />
+                    {{item.price}}
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

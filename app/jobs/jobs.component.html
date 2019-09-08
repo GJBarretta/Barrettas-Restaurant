@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="container container-height margin-top margin-bottom">
+    <div class="row text-center">
+        <div class="col-12 text-center">
+            <h1>Jobs</h1>
+            <hr />
+        </div>
+        <div class="col-12 text-center">
+            <p>
+                Stop by and fill out the full application.
+            </p>
+        </div>   
+
+        <div class="col-12 text-center">
+            <input 
+                readonly type="text" 
+                class="txtWidthShort" 
+                [(ngModel)]="position" 
+                placeholder="desired position...">
+            <div class="dropdown div-inline">
+            <button class="btn btn-primary dropdown-toggle btn-selector" type="button" data-toggle="dropdown">Positions
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a (click)="onPositionClick('Waitstaff')">Waitstaff</a></li>
+                <li><a (click)="onPositionClick('Cook')">Cook</a></li>
+                <li><a (click)="onPositionClick('Pizza Man/Woman')">Pizza Man/Woman</a></li>
+                <li><a (click)="onPositionClick('Dishwasher')">Dishwasher</a></li>
+            </ul>
+            </div>
+            <br />
+            <input  maxlength="30" type="text" class="txtWidthWide" [(ngModel)]="name" placeholder="name...">
+            <br />
+            <input  maxlength="30" type="text" class="txtWidthWide" [(ngModel)]="email" placeholder="e-mail...">
+            <br />
+            <input  maxlength="15" type="text" class="txtWidthWide" [(ngModel)]="phone" placeholder="phone number...">
+            <br />
+            
+            <button type="submit" [disabled]="!isValid || isSubmitted" (click)="isValid && onSubmit()">Send</button>
+            <br />
+            <p *ngIf="isSubmitted">Thank you for your submission.
+                <br>
+                If a position becomes available we will contact you.
+            </p>    
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

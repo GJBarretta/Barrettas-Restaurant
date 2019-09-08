@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">Beverages</h3>
+            <hr />
+            <div class="col-10 offset-1">
+                <img src="./../../../../assets/menu/beverages/1.jpg" title="" alt="" class="img-fluid rounded">
+            </div>
+            <p style="text-align:center;margin-bottom:0;"><strong>Choose from:</strong></p>
+            <p style="text-align:center;margin-top:0;margin-bottom:0;"><i>
+                    Coca Cola, Diet Coke, Sprite, Orange, Root Beer,
+                </i></p>
+            <p style="text-align:center;margin-top:0;margin-bottom:0;"><i>
+                    Fruit Punch, Pink Lemonade, Sweet Green Tea,
+                </i></p>
+            <p style="text-align:center;margin-top:0;"><i>
+                    Sweet Rasberry Tea, Unsweetened Homemade Tea
+                </i></p>
+            <ul class="list-group">
+                <a class="list-group-item no-border" style="text-align: center" *ngFor="let item of items">
+                    <strong>{{ item.name }}</strong>
+                    <br />
+                    {{item.desc}}
+                    <br *ngIf="item.desc" />
+                    {{item.price}}
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

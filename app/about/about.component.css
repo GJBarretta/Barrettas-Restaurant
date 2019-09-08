@@ -1,0 +1,16 @@
+.left {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.t {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; /* Column | row */
+}
+.small-wrap  {
+    float: left;
+    /* margin-left: 3em; */
+    margin-right: 1em;
+  }

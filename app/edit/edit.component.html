@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="container container-height margin-top margin-bottom">
+    <div class="row text-center">
+        <div class="col-12 text-center">
+            <h1>Edit</h1>
+            <hr />
+        </div>
+
+        <div class="col-12">
+            <input type="text" [(ngModel)]="name" placeholder="name...">
+        </div>
+        <div class="col-12">
+            <input type="text" [(ngModel)]="description" placeholder="description...">
+        </div>
+        <div class="col-12">
+            <input type="text" [(ngModel)]="price" placeholder="price...">
+        </div>
+        <div class="col-12">
+            <button (click)="onItemUpdate()">Add Item</button>
+            <hr>
+        </div>
+        <div class="col-12">
+            <input type="password" [(ngModel)]="password" placeholder="password..."><br />
+            <button (click)="onItemSubmit()">Submit Items to Server</button>
+            <hr>
+        </div>
+
+        <div class="col-12">
+            <h4>Current Items:</h4>
+            <hr>
+        </div>
+
+        <div class="col-12" *ngFor="let item of items; let i = index">
+            <u>ITEM #{{i+1}}</u> <br> {{item.name}} <br> {{item.desc}} <br> {{item.price}} <br> <button (click)="onItemDelete(i, 1)">remove</button><br><hr>
+        </div>
+
+        <div class="col-12">
+            <hr>
+            
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

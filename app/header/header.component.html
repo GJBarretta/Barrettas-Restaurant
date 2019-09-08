@@ -1,0 +1,59 @@
+<div #h1></div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <div class="container">
+    <button class="navbar-toggler" (click)="navbarTogglerClick()" #toggler type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" #collapse id="navbarNav" (mouseleave)="close($event)">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['']">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            (click)="currentUrl('/menu')"
+            [routerLink]="['/menu']">
+            Menu
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            (click)="currentUrl('/specials')"
+            [routerLink]="['/specials']">
+            Specials
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            (click)="currentUrl('/catering')"
+            [routerLink]="['/catering']">
+            Catering
+          </a>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/location']">Hours</a>
+        </li> -->
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            (click)="currentUrl('/location')"
+            [routerLink]="['/location']">
+            Hours & Location
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            (click)="currentUrl('/about')"
+            [routerLink]="['/about']">
+            About Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

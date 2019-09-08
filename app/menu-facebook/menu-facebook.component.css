@@ -1,0 +1,35 @@
+.sidebar-button {
+    background-color:darkred; 
+    color:white;
+    line-height:50px;
+    height:50px;
+    border-top:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid black;
+}
+
+.sidebar-p {
+    text-align: center;
+    line-height:50px;
+    height:50px;
+}
+
+.sidebar button:hover, button:active {
+    color:green;
+    text-decoration: none;
+}
+
+.sidebar button:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.margin-top-fb {
+    padding-top:20px;
+}
+
+.container-fluid {
+    background-color: white;
+    min-height:100%;
+    width:100%;
+}

@@ -1,0 +1,376 @@
+<!-- <div #h1></div> -->
+<div #h1 class="container-fluid container-height margin-top-fb margin-bottom">
+    <div>
+        <hr>
+    </div>
+    <div class="row" style="margin: auto">
+        <div class="col-2 px-1 sidebar" id="sticky-sidebar">
+            <div class="row">
+                <button (click)="onClick($event, 'pizza')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">Pizza</p>
+                </button>
+                <button (click)="onClick($event, 'stromboli')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Stromboli & Calzone
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Stromboli
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Calzone
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Calzone
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'appetizers')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Appetizers
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Appetizers
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Apps
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Apps
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'sideorders')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Side Orders
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Side Orders
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Sides
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Sides
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'salad')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">Salads</p>
+                </button>
+                <button (click)="onClick($event, 'soup')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Soup Del Giorno
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Soup
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Soup
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Soup
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'entrees')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">Entrees</p>
+                </button>
+                <button (click)="onClick($event, 'pasta-dinner')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Pasta Dinner
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Pasta Dinner
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Pasta
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Pasta
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'baked-pasta')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Baked Pasta
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Baked Pasta
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            B.Pasta
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            B.Pasta
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'hot-subs')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Hot Subs & Wraps
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Hot Subs
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            HotSubs
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            HotSubs
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'cold-subs')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Cold Subs & Wraps
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Cold Subs
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Subs
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Subs
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'sandwiches')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <span class="d-none d-md-block">
+                            Sandwiches
+                        </span>
+                        <span class="d-md-none">
+                            Sandwich
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'burgers')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Flame Grilled Burgers
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Burgers
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Burgers
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Burgers
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'best')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Domenico's Best
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Dom's Best
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            D's Best
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Best
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'gluten-free-short')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Gluten Free
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            GF Items
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            GF
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            GF
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'children')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            For The Children
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            For Kids
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            For Kids
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Kids
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'beverages')" class="col-12 sidebar-button">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Beverages
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Beverages
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Drinks
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Drinks
+                        </span>
+                    </p>
+                </button>
+                <button (click)="onClick($event, 'desserts')" class="col-12 sidebar-button"
+                    style="border-bottom: 2px solid black;">
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Desserts
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Desserts
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Dessert
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Dessert
+                        </span>
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div class="col-10" id="main">
+            <app-appetizers *ngIf="menuSelected==='appetizers'"></app-appetizers>
+            <app-side-orders *ngIf="menuSelected==='sideorders'"></app-side-orders>
+            <app-soup *ngIf="menuSelected==='soup'"></app-soup>
+            <app-salad *ngIf="menuSelected==='salad'"></app-salad>
+            <app-children *ngIf="menuSelected==='children'"></app-children>
+            <app-entrees *ngIf="menuSelected==='entrees'"></app-entrees>
+            <app-pasta-dinner *ngIf="menuSelected==='pasta-dinner'"></app-pasta-dinner>
+            <app-baked-pasta *ngIf="menuSelected==='baked-pasta'"></app-baked-pasta>
+            <app-gluten-free-short *ngIf="menuSelected==='gluten-free-short'"></app-gluten-free-short>
+            <app-hot-wraps *ngIf="menuSelected==='hot-subs'"></app-hot-wraps>
+            <app-hot-subs *ngIf="menuSelected==='hot-subs'"></app-hot-subs>
+            <app-cold-subs *ngIf="menuSelected==='cold-subs'"></app-cold-subs>
+            <app-burgers *ngIf="menuSelected==='burgers'"></app-burgers>
+            <app-domenico-best *ngIf="menuSelected==='best'"></app-domenico-best>
+            <app-sandwiches *ngIf="menuSelected==='sandwiches'"></app-sandwiches>
+            <app-pizza *ngIf="menuSelected==='pizza'"></app-pizza>
+            <app-stromboli *ngIf="menuSelected==='stromboli'"></app-stromboli>
+            <app-calzone *ngIf="menuSelected==='stromboli'"></app-calzone>
+            <app-beverages *ngIf="menuSelected==='beverages'"></app-beverages>
+            <app-dessert *ngIf="menuSelected==='desserts'"></app-dessert>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.navbar .navbar-nav li a{
+    color: white;
+}
+.navbar .navbar-nav li a:visited {
+    color: white;
+}
+.navbar .navbar-nav li a:hover, a:active{
+    color: green;
+}
+
+.navbar .container {
+    background-color: white;
+    margin-top: -8px;
+}
+
+.navbar .navbar-nav {
+    background-color: darkred;
+    border: 1px solid darkred;  
+}

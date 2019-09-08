@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">Desserts</h3>
+            <hr />
+            <!-- image slidshow -->
+            <div class="col-10 offset-1">
+                <app-slideshow [images]="images"></app-slideshow>
+            </div>
+
+            <ul class="list-group">
+                <a class="list-group-item no-border" style="text-align: center" *ngFor="let item of items">
+                    <strong>{{ item.name }}</strong>
+                    <br />
+                    {{item.desc}}
+                    <br *ngIf="item.desc" />
+                    {{item.price}}
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

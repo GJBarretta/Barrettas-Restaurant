@@ -1,0 +1,46 @@
+.sidebar-button {
+    background-color:darkred; 
+    color:white;
+    line-height:50px;
+    height:50px;
+    border-top:2px solid black;
+    border-left:2px solid black;
+    border-right:2px solid black;
+}
+
+.sidebar-p {
+    text-align: center;
+    line-height:50px;
+    height:50px;
+}
+
+.sidebar button:hover, button:active {
+    color:green;
+    text-decoration: none;
+}
+
+.sidebar button:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.doordash {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 10px; 
+    width: 300px;
+    height: 63px;  
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+  
+a:hover, a:active {
+    color: darkred;
+    text-decoration: none;
+  }

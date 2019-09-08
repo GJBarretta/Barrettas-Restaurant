@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+.margin-top {
+    padding-top:65px;
+}
+.margin-bottom {
+    padding-bottom:65px;
+}
+
+.no-border {
+    border:none;
+}
+
+.container-height {
+    min-height: 100%;
+}
+
+html,body {
+    height:100%;  
+    background-image: url("./assets/vintage-concrete.png");
+  }
+
+.container { 
+    background:white;
+} 
+
+* {
+    font-family: 'Open Sans';
+}

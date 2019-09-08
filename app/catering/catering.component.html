@@ -1,0 +1,36 @@
+<div class="container container-height margin-top margin-bottom" #top>
+  <div class="row">
+    <div class="col-12">
+      <app-header></app-header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h1 style="text-align: center">
+          Catering Menu
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <hr />
+      <ul class="list-group ">
+        <a 
+          class="list-group-item" 
+          style="text-align: center; border:none;" 
+          *ngFor="let item of items">
+          <strong>{{ item.name }}</strong>
+          <br />
+          {{item.desc}}
+          <br *ngIf="item.desc"/>
+          {{item.price}}
+        </a>
+      </ul> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

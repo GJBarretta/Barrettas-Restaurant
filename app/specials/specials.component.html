@@ -1,0 +1,108 @@
+<div 
+    class="container container-height margin-top margin-bottom" 
+    #top>
+    <div class="row" >
+        <div class="col-12">
+            <app-header></app-header>
+        </div>
+
+        <div class="col-12 text-center">
+            <h1>
+                Specials
+            </h1>
+            <a href="https://www.doordash.com/store/barretta-s-kennett-square-324838/" target="_blank" class="doordash" style="display: inline-block;">
+                Get Delivery via Doordash
+                <br>
+                (prices may not be accurate)
+            </a>
+            <hr />
+        </div>
+        <div class="col-1"><p></p></div>
+        <div class="col-3 px-1 sidebar" id="sticky-sidebar">
+            <div class="row">
+                <button 
+                    (click)="onClick($event, 'pizza')"
+                    class="col-12 sidebar-button" 
+                    >
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Pizza Deals
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Pizza Deals
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Pizza
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Pizza
+                        </span>
+                    </p>
+                </button>
+                <button 
+                    (click)="onClick($event, 'lunch')"
+                    class="col-12 sidebar-button" 
+                    >
+                    <p class="sidebar-p">
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Lunch Combos
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Lunch Combos
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Lunch
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Lunch
+                        </span>
+                    </p>
+                </button>
+                <button 
+                    (click)="onClick($event, 'dinner')"
+                    class="col-12 sidebar-button" 
+                    style="border-bottom: 2px solid black;"
+                    >
+                    <p class="sidebar-p">
+                        <span class="d-none d-lg-block">
+                            Dinner Specials
+                        </span>
+                        <span class="d-none d-md-block d-lg-none">
+                            Dinner Specials
+                        </span>
+                        <span class="d-none d-sm-block d-md-none">
+                            Dinner
+                        </span>
+                        <span class="d-block d-sm-none">
+                            Dinner
+                        </span>
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div class="col-8 offset-0" id="main">
+            <app-pizza-specials *ngIf="menuSelected==='pizza'"></app-pizza-specials>
+            <app-lunch-specials *ngIf="menuSelected==='lunch'"></app-lunch-specials>
+            <app-dinner-specials *ngIf="menuSelected==='dinner'"></app-dinner-specials>
+        </div>
+
+
+        <div class="col-12">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

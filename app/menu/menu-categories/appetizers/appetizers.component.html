@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">Appetizers</h3>
+            <hr />
+            <!-- image slidshow -->
+            <div class="col-10 offset-1">
+                <app-slideshow id="carousel" [images]="images"></app-slideshow>
+            </div>
+            <ul class="list-group">
+                <a 
+                    class="list-group-item no-border" 
+                    style="text-align: center" 
+                    *ngFor="let item of items">
+                    <strong>{{ item.name }}</strong>
+                    <br />
+                    {{item.desc}}
+                    <br *ngIf="item.desc" />
+                    {{item.price}}
+                </a>
+                <a 
+                    class="list-group-item no-border" 
+                    style="text-align: center">
+                    <strong>Wings</strong>
+                    <br />
+                    BBQ, Cajun, Italian, Mild, Hot, Extra Hot, *Habanero
+                    <br />
+                    (Regular or Boneless)
+                    <br />
+                    (10) - $12.00
+                    <br />
+                    (20) - $23.00
+                    <br />
+                    (30) - $34.00
+                    <br />
+                    *4 oz. Xtra Habanero $2.00
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

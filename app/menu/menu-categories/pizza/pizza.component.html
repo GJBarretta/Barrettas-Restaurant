@@ -1,0 +1,991 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">Pizza</h3>
+            <hr />
+        </div>
+
+        <!-- top text -->
+        <div class="col-12">
+            <p style="text-align:center;margin-bottom:0;"><i>All pizzas are made with fresh and natural ingredients.</i>
+            </p>
+            <p style="text-align:center;margin-top:0;"><i>The pizza dough & sauce are made daily.</i></p>
+        </div>
+
+        <!-- image slidshow -->
+        <div class="col-10 offset-1">
+            <app-slideshow [images]="images"></app-slideshow>
+        </div>
+
+        <!-- space -->
+        <div class="col-12">
+            <p></p>
+        </div>
+
+        <div class="col-12">
+            <p style="text-align:center;margin-bottom:0;"><i>Available in three variations:</i></p>
+        </div>
+
+        <!-- top boxes -->
+        <div class="col-4 box centered">
+            <p>
+                <strong>
+                    ORIGINAL
+                </strong>
+            </p>
+            <p>
+                Pizza sauce &
+                <span class="d-none d-md-block">
+                    Mozzarella
+                </span>
+                <span class="d-md-none">
+                    Mozza- rella
+                </span>
+            </p>
+        </div>
+        <div class="col-4 box centered">
+            <p>
+                <strong>
+                    ROMANA WHITE
+                </strong>
+            </p>
+            <p>
+                Garlic, Olive Oil &
+                <span class="d-none d-md-block">
+                    Mozzarella
+                </span>
+                <span class="d-md-none">
+                    Mozza- rella
+                </span>
+            </p>
+        </div>
+        <div class="col-4 box centered">
+            <p>
+                <strong>
+                    RUSTICA
+                </strong>
+            </p>
+            <p>
+                Marinara Sauce &
+                <span class="d-none d-md-block">
+                    Mozzarella
+                </span>
+                <span class="d-md-none">
+                    Mozza- rella
+                </span>
+            </p>
+        </div>
+
+        <!-- space -->
+        <div class="col-12">
+            <p></p>
+        </div>
+
+        <!-- pizza examples -->
+        <div class="col-12">
+            <div class="row">
+                <div class="col-8 offset-1">
+                    <p>
+                        {{pizzaData.get('tomatoPieSic').name}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p class="centered-vertical">
+                        {{pizzaData.get('tomatoPieSic').price}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 offset-1">
+                    <p>
+                        {{pizzaData.get('tomatoPieRound').name}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p class="centered-vertical">
+                        {{pizzaData.get('tomatoPieRound').price}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 offset-1">
+                    <p>
+                        {{pizzaData.get('margherita').name}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p class="centered-vertical">
+                        {{pizzaData.get('margherita').price}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- slices/price/each extra grid -->
+        <div class="col-12 box text-center">
+            <div class="row">
+                <div class="col-6">
+                    <p style="margin-bottom:0;">
+                        <strong>NEAPOLITAN: Thin Round Crust</strong>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p><u>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Slices
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Slices
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Sl.
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Sl.
+                        </span>
+                    </u></p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <u>
+                            <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Price
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Price
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            $
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            $
+                        </span>
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <u>
+                            <!-- large -->
+                        <span class="d-none d-lg-block">
+                            Each Extra
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            Extras
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            Xtra
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            Xtra
+                        </span>
+                        </u>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        Small - 10"
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        4
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('small').price}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('small').price}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('small').priceSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('small').priceSm}}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('small').extras}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('small').extras}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('small').extrasSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('small').extrasSm}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        Medium - 14"
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        6
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('medium').price}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('medium').price}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('medium').priceSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('medium').priceSm}}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('medium').extras}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('medium').extras}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('medium').extrasSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('medium').extrasSm}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        Large - 16"
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        8
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('large').price}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('large').price}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('large').priceSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('large').priceSm}}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('large').extras}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('large').extras}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('large').extrasSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('large').extrasSm}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        Gluten Free - 12"
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        6
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('gluten-free').price}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('gluten-free').price}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('gluten-free').priceSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('gluten-free').priceSm}}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('gluten-free').extras}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('gluten-free').extras}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('gluten-free').extrasSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('gluten-free').extrasSm}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p style="margin-bottom:0;">
+                        <strong>SICILIAN: Thick Square Crust</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        16" x 16"
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        16
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('sicilian').price}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('sicilian').price}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('sicilian').priceSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('sicilian').priceSm}}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <!-- large -->
+                        <span class="d-none d-lg-block">
+                            {{pizzaData.get('sicilian').extras}}
+                        </span>
+
+                        <!-- medium -->
+                        <span class="d-none d-md-block d-lg-none">
+                            {{pizzaData.get('sicilian').extras}}
+                        </span>
+
+                        <!-- small -->
+                        <span class="d-none d-sm-block d-md-none">
+                            {{pizzaData.get('sicilian').extrasSm}}
+                        </span>
+
+                        <!-- extra small -->
+                        <span class="d-block d-sm-none">
+                            {{pizzaData.get('sicilian').extrasSm}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- space -->
+        <div class="col-12">
+            <p>
+
+            </p>
+        </div>
+
+        <!-- toppings -->
+        <div class="col-12">
+            <div class="row">
+                <div class="col-4">
+                    <p>
+                        <strong>Single Charge Toppings:</strong>
+                    </p>
+                </div>
+                <div class="col-8">
+                    <p>
+                        Pepperoni, Sausage, Bacon, Meatball, Ham, Salami,
+                        Capicollo, Mushrooms, Green Peppers, Roasted Peppers,
+                        Sweet Peppers, Cooked Onions, Raw Onions, Black Olives,
+                        Broccoli, Spinach, Jalapeno, Pineapple, Garlic,
+                        Anchovies, Extra Cheese, Ricotta, Eggplant, Grape Tomato, 
+                        Long Hots
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <p>
+                        <strong>Double Charge Toppings:</strong>
+                    </p>
+                </div>
+                <div class="col-8">
+                    <p>
+                        Beef Steak, Chicken Steak, Breaded Chicken, Grilled Chicken, 
+                        Prosciutto di Parma, Fresh Mozzarella, Broccoli di Rabe
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- combos: hidden on screens smaller than md-->
+        <div class="col-12 box d-none d-md-block">
+            <div class="row">
+                <div class="col-3 offset-1">
+                    <p>
+                        <strong>PIZZA COMBOS</strong>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <u>
+                            Small
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <u>
+                            Medium
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <u>
+                            Large
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <u>
+                            Sicilian
+                        </u>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <p>
+                        <strong>Veggie</strong>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="d-none d-md-block">
+                        <br />
+                        Peppers, Onions, Mushrooms, Garlic
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>                       
+                        {{pizzaData.get('veggie').small}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('veggie').medium}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('veggie').large}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('veggie').sicilian}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <p>
+                        <strong>Meat</strong>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="d-none d-md-block">
+                        <br />
+                        Pepperoni, Bacon, Sausage, Extra Cheese
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>                       
+                        {{pizzaData.get('meat').small}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meat').medium}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meat').large}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meat').sicilian}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <p>
+                        <strong>White</strong>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="d-none d-md-block">
+                        <br />
+                        Tomatoes, Broccoli, Mushrooms, Garlic
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>                       
+                        {{pizzaData.get('white').small}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('white').medium}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('white').large}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('white').sicilian}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <p>
+                        <strong>Rustica</strong>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="d-none d-md-block">
+                        <br />
+                        Roasted Peppers, Mushrooms, Eggplant
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>                       
+                        {{pizzaData.get('rustica').small}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('rustica').medium}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('rustica').large}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('rustica').sicilian}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <p>
+                        <strong>Buffalo</strong>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="d-none d-md-block">
+                        <br />
+                        Chicken, Hot Sauce, Bleu Cheese
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>                       
+                        {{pizzaData.get('buffalo').small}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('buffalo').medium}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('buffalo').large}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('buffalo').sicilian}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <p>
+                        <strong>
+                            Meat&Veggie
+                        </strong>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p>
+                        <br />
+                        Peppers, Onions, Mushrooms, Garlic,
+                        Pepperoni, Bacon, Sausage, Extra Cheese
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>                       
+                        {{pizzaData.get('meatveggie').small}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').medium}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').large}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').sicilian}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- combos: hidden on screens wider than md-->
+        <div class="col-12 box d-md-none">
+            <div class="row">
+                <div class="col-4">
+                    <p>
+                        <strong>PIZZA COMBOS</strong>
+                    </p>
+                </div>
+                <div class="col-2 text-center">
+                    <p>
+                        <u>
+                            Sm
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2 text-center">
+                    <p>
+                        <u>
+                            Med
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2 text-center">
+                    <p>
+                        <u>
+                            L
+                        </u>
+                    </p>
+                </div>
+                <div class="col-2 text-center">
+                    <p>
+                        <u>
+                            Sic
+                        </u>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <strong>Veggie</strong>
+                    </p>
+                </div>
+                <div class="col-2 offset-2">
+                    <p>
+                        {{pizzaData.get('veggie').smallSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('veggie').mediumSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('veggie').largeSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('veggie').sicilianSm}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <strong>Meat</strong>
+                    </p>
+                </div>
+                <div class="col-2 offset-2">
+                    <p>
+                        {{pizzaData.get('meat').smallSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meat').mediumSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meat').largeSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meat').sicilianSm}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <strong>White</strong>
+                    </p>
+                </div>
+                <div class="col-2 offset-2">
+                    <p>
+                        {{pizzaData.get('white').smallSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('white').mediumSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('white').largeSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('white').sicilianSm}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <strong>Rustica</strong>
+                    </p>
+                </div>
+                <div class="col-2 offset-2">
+                    <p>
+                        {{pizzaData.get('rustica').smallSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('rustica').mediumSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('rustica').largeSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('rustica').sicilianSm}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <strong>Buffalo</strong>
+                    </p>
+                </div>
+                <div class="col-2 offset-2">
+                    <p>
+                        {{pizzaData.get('buffalo').smallSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('buffalo').mediumSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('buffalo').largeSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('buffalo').sicilianSm}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <strong>
+                            Meat&Veg
+                        </strong>
+                    </p>
+                </div>
+                <div class="col-2 offset-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').smallSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').mediumSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').largeSm}}
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        {{pizzaData.get('meatveggie').sicilianSm}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

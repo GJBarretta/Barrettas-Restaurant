@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="text-align:center;">For The Children</h3>
+            <hr />
+            <div class="col-10 offset-1">
+                <img src="./../../../../assets/menu/for-children/1.jpg" title=""
+                    alt=""
+                    class="img-fluid rounded"
+                    >
+            </div>
+            <p style="text-align:center;"><i>Choice of Pasta: Penne, Capellini or Linguini</i></p>
+            <ul class="list-group">
+                <a class="list-group-item no-border" style="text-align: center" *ngFor="let item of items">
+                    <strong>{{ item.name }}</strong>
+                    <br />
+                    {{item.desc}}
+                    <br *ngIf="item.desc" />
+                    {{item.price}}
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
