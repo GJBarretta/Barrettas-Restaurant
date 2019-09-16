@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="container container-height margin-top margin-bottom">
-    <div class="row text-center">
+    <div class="row">
         <div class="col-12 text-center">
             <h1>Jobs</h1>
             <hr />
@@ -10,37 +10,58 @@
                 Stop by and fill out the full application.
             </p>
         </div>   
-
         <div class="col-12 text-center">
-            <input 
-                readonly type="text" 
-                class="txtWidthShort" 
-                [(ngModel)]="position" 
-                placeholder="desired position...">
-            <div class="dropdown div-inline">
-            <button class="btn btn-primary dropdown-toggle btn-selector" type="button" data-toggle="dropdown">Positions
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a (click)="onPositionClick('Waitstaff')">Waitstaff</a></li>
-                <li><a (click)="onPositionClick('Cook')">Cook</a></li>
-                <li><a (click)="onPositionClick('Pizza Man/Woman')">Pizza Man/Woman</a></li>
-                <li><a (click)="onPositionClick('Dishwasher')">Dishwasher</a></li>
-            </ul>
-            </div>
-            <br />
-            <input  maxlength="30" type="text" class="txtWidthWide" [(ngModel)]="name" placeholder="name...">
-            <br />
-            <input  maxlength="30" type="text" class="txtWidthWide" [(ngModel)]="email" placeholder="e-mail...">
-            <br />
-            <input  maxlength="15" type="text" class="txtWidthWide" [(ngModel)]="phone" placeholder="phone number...">
-            <br />
-            
-            <button type="submit" [disabled]="!isValid || isSubmitted" (click)="isValid && onSubmit()">Send</button>
-            <br />
+            <form 
+                (ngSubmit)="onSubmit()"
+                #f = "ngForm">
+                <select 
+                    name="jobtype">
+                    <option value="Waitstaff">Waitstaff</option>
+                    <option value="Cook">Cook</option>
+                    <option value="Pizza Man/Woman">Pizza Man/Woman</option>
+                    <option value="Dishwasher">Dishwasheer</option>
+                </select>
+                <br>
+                <input  
+                    type="text"
+                    maxlength="30"
+                    ngModel
+                    placeholder="name..."
+                    required
+                    name="name"
+                    #name="ngModel"
+                    [class.invalid]="name.touched && name.invalid">
+                <br>
+                <input 
+                    type="text"
+                    maxlength="30"
+                    ngModel
+                    placeholder="email..."
+                    required
+                    email
+                    name="email"
+                    #email="ngModel"
+                    [class.invalid]="email.touched && email.invalid">
+                <br>
+                <input 
+                    type="tel"
+                    pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}"
+                    maxlength="30"
+                    ngModel
+                    placeholder="phone number..."
+                    required
+                    name="phone"
+                    #phone="ngModel"
+                    [class.invalid]="phone.touched && phone.invalid">
+                <br>
+                <button type="submit" [disabled]="f.invalid || isSubmitted">Send</button>
+
+            </form>
+            <br>
             <p *ngIf="isSubmitted">Thank you for your submission.
                 <br>
                 If a position becomes available we will contact you.
-            </p>    
+            </p>
         </div>
     </div>
 </div>

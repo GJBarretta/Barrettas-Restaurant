@@ -15,11 +15,6 @@ export class JobsComponent implements OnInit {
   isValid: boolean;
   isSubmitted: boolean;
 
-  isValidEmail: boolean;
-  isValidPhone: boolean;
-  validationEmailMessage: string;
-  validationPhoneMessage: string;
-
   data: string[];   
   
   constructor(private httpPostJobsService: HttpPostJobsService) { }
@@ -34,10 +29,6 @@ export class JobsComponent implements OnInit {
     this.data = [];
   }
 
-  ngDoCheck() {
-    this.onDataChange();    
-  }
-
   onSubmit(){
     this.isSubmitted = true;
     this.data.push(this.position);
@@ -50,22 +41,4 @@ export class JobsComponent implements OnInit {
     });
     this.data = [];
   }
-
-  onDataChange(){
-    if (this.name === ""
-      || this.email === ""
-      || this.phone === ""
-      || this.position === ""){
-        this.isValid = false;
-      }
-    else {
-      this.isValid = true;
-    }
-  }
-
-  onPositionClick(position: string){
-    this.position = position;
-    this.onDataChange();
-  }
-
 }

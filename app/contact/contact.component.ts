@@ -25,10 +25,6 @@ export class ContactComponent implements OnInit {
     this.data = [];
   }
 
-  ngDoCheck() {
-    this.onDataChange();    
-  }
-
   onSubmit(){
     this.isSubmitted = true;
     this.data.push(this.name);
@@ -39,16 +35,5 @@ export class ContactComponent implements OnInit {
         console.log(data);
     });
     this.data = [];
-  }
-
-  onDataChange(){
-    if (this.name === ""
-      || this.email === ""
-      || this.message === ""){
-        this.isValid = false;
-      }
-    else {
-      this.isValid = true;
-    }
   }
 }

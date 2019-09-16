@@ -1,24 +1,10 @@
-.txtWidthWide {
+textarea, input, select  {
     border:0 0 0 0;
     padding:0 0 0 0;
-    width:20em;
-    text-align:center;
-}
-.txtWidthShort {
-    border:0 0 0 0;
-    padding:0 0 0 0;
-    width:14em;
-    text-align:center;
+    text-align: center;
+    width:20em;  
 }
 
-.div-inline{
-    display:inline-block;
-}
-
-.btn-selector {
-    padding-left:2px;
-    padding-right:2px;
-    padding-top:2px;
-    padding-bottom:1px; 
-    margin:0px;
+.invalid {
+    border: 1px solid red;
 }
