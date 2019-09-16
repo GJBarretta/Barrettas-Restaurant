@@ -1,27 +1,57 @@
 <app-header></app-header>
 <div class="container container-height margin-top margin-bottom">
-    <div class="row text-center">
+    <div class="row">
         <div class="col-12 text-center">
             <h1>Contact</h1>
             <hr />
         </div>
         <div class="col-12 text-center">
-
-            <input maxlength="30" type="text" [(ngModel)]="name" placeholder="name...">
-            <br />
-            <input maxlength="30" type="text" [(ngModel)]="email" placeholder="e-mail...">
-            <br />
-            <textarea maxlength="240" style="margin-top:0px;"rows="2" placeholder="message..." [(ngModel)]="message"></textarea>
-            <br />
-            <button type="submit" [disabled]="! isValid || isSubmitted" (click)="isValid && onSubmit()">Send</button>
-            <br />
+            <form 
+                (ngSubmit)="onSubmit()"
+                #f = "ngForm">
+                <input 
+                    type="text"
+                    maxlength="30"
+                    ngModel
+                    placeholder="name..."
+                    required
+                    name="name"
+                    #name="ngModel"
+                    [class.invalid]="name.touched && name.invalid">
+                <br>
+                <input 
+                    type="text"
+                    maxlength="30"
+                    ngModel
+                    placeholder="email..."
+                    required
+                    email
+                    name="email"
+                    #email="ngModel"
+                    [class.invalid]="email.touched && email.invalid">
+                <br>
+                <textarea
+                    name="message" 
+                    maxlength="240"
+                    #message="ngModel"
+                    rows="5"
+                    required
+                    [class.invalid]="message.touched && message.invalid"
+                    placeholder="message..."
+                    ngModel>
+                </textarea>
+                <br>
+                <button 
+                    type="submit" 
+                    [disabled]="f.invalid || isSubmitted">
+                    Send
+                </button>
+            </form>
             <p *ngIf="isSubmitted">Thank you for your message.
                 <br>
                 We will get back to you as soon as possible.
             </p> 
-
         </div>
-        
     </div>
 </div>
 <app-footer></app-footer>
