@@ -7,10 +7,10 @@ import { HttpPostJobsService } from '../services/http.post.jobs.service';
   styleUrls: ['./jobs.component.css']
 })
 export class JobsComponent implements OnInit {
-  name: string;
-  email: string;
-  phone: string;
-  position: string;
+  nameC: string;
+  emailC: string;
+  phoneC: string;
+  positionC: string;
 
   isValid: boolean;
   isSubmitted: boolean;
@@ -20,10 +20,10 @@ export class JobsComponent implements OnInit {
   constructor(private httpPostJobsService: HttpPostJobsService) { }
 
   ngOnInit() {
-    this.name = "";
-    this.email = "";
-    this.phone = "";
-    this.position = "";
+    this.nameC = "";
+    this.emailC = "";
+    this.phoneC = "";
+    this.positionC = "";
     this.isValid = false;
     this.isSubmitted = false;
     this.data = [];
@@ -31,10 +31,10 @@ export class JobsComponent implements OnInit {
 
   onSubmit(){
     this.isSubmitted = true;
-    this.data.push(this.position);
-    this.data.push(this.name);
-    this.data.push(this.email);
-    this.data.push(this.phone);
+    this.data.push(this.positionC);
+    this.data.push(this.nameC);
+    this.data.push(this.emailC);
+    this.data.push(this.phoneC);
     this.httpPostJobsService.postData(this.data)
       .subscribe((data: string[]) => {
         console.log(data);

@@ -7,9 +7,9 @@ import { HttpPostContactService } from '../services/http.post.contact.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  name: string;
-  email: string;
-  message: string;
+  nameC: string;
+  emailC: string;
+  messageC: string;
   isValid: boolean;
   isSubmitted: boolean;
   data: string[];
@@ -17,9 +17,9 @@ export class ContactComponent implements OnInit {
   constructor(private httpPostContactService: HttpPostContactService) { }
 
   ngOnInit() {
-    this.name = "";
-    this.email = "";
-    this.message = "";
+    this.nameC = "";
+    this.emailC = "";
+    this.messageC = "";
     this.isValid = false;
     this.isSubmitted = false;
     this.data = [];
@@ -27,9 +27,9 @@ export class ContactComponent implements OnInit {
 
   onSubmit(){
     this.isSubmitted = true;
-    this.data.push(this.name);
-    this.data.push(this.email);
-    this.data.push(this.message);
+    this.data.push(this.nameC);
+    this.data.push(this.emailC);
+    this.data.push(this.messageC);
     this.httpPostContactService.postData(this.data)
       .subscribe((data: string[]) => {
         console.log(data);
