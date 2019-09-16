@@ -12,7 +12,7 @@
                 <input 
                     type="text"
                     maxlength="30"
-                    ngModel
+                    [(ngModel)]="nameC"
                     placeholder="name..."
                     required
                     name="name"
@@ -22,7 +22,7 @@
                 <input 
                     type="text"
                     maxlength="30"
-                    ngModel
+                    [(ngModel)]="emailC"
                     placeholder="email..."
                     required
                     email
@@ -38,7 +38,7 @@
                     required
                     [class.invalid]="message.touched && message.invalid"
                     placeholder="message..."
-                    ngModel>
+                    [(ngModel)]="messageC">
                 </textarea>
                 <br>
                 <button 
